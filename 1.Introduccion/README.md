@@ -1,7 +1,12 @@
 # INTRODUCCION
-- [Comentarios](#comentarios) 
-- [La_consola](#La_Consola) 
-- [Naiming](#Naiming) 
+- [INTRODUCCION](#introduccion)
+  - [Comentarios](#comentarios)
+  - [Tipos de Comentarios](#tipos-de-comentarios)
+  - [La consola](#la-consola)
+    - [Tipos de mensaje por consola](#tipos-de-mensaje-por-consola)
+      - [1. Notificadores](#1-notificadores)
+      - [2. Gestion de tiempo](#2-gestion-de-tiempo)
+      - [3. Tablas](#3-tablas)
   
 ## Comentarios
 Es la parte dentro de mi archivo de codigo que no es leido ni ejecutado por el interprete de `js`.
@@ -25,3 +30,39 @@ Es la parte dentro de mi archivo de codigo que no es leido ni ejecutado por el i
    *
    ```
    Este tipo de comentario es muy usado para documentar el codigo, usado generalmente para la explicacion de funciones y clases en `Js`.
+   [link del archivo]("./comentarios.js")
+
+## La consola
+La herramienta de JavaScript mas usada dentro de los navegadores es usada para la [depuracion](#depuracion) de nuestro codigo
+
+>[!TIP]
+> ##### depuracion, es la tecnica que nos permite mostrar el codigo en las distintas faces del desarrollo, y verificar que el mensaje mostrado sea el correto. y verificando que el codigo no tenga errores de sintaxis de logica o de precaucion.
+
+### Tipos de mensaje por consola
+#### 1. Notificadores
+Mostrar un mensaje por consola (sin formato)
+```js
+console.log("hola mundo") 
+```
+Mostrar un mensaje de estilo informativo
+```js
+console.info("mensaje de tipo informativo")
+```
+Mostrar un mensaje de estilo alerta
+```js
+console.warn("mensaje de tipo alerta")
+```
+Mostrar un mensaje de estilo error
+```js
+console.error("mensaje de error")
+```
+#### 2. Gestion de tiempo
+Este tipo de mensaje nos sirve para ver la duracion de ejcucion de nuestro codigo y poder optimizarlo, para hacer uso de esta herramienta tenemos que iniciar la consola con un `time()` luego vendra el codigo que deseamos ver la durcion y finalmente terminar el time de la consola con `timeEnd()`
+```js
+edad=18
+if (edad >= 18){
+console.log("eres mayor de edad")}
+else{
+console.warn("eres pulpin") }
+```
+#### 3. Tablas
