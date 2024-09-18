@@ -7,7 +7,7 @@
       - [1. Notificadores](#1-notificadores)
       - [2. Gestion de tiempo](#2-gestion-de-tiempo)
       - [3. Tablas](#3-tablas)
-  
+  - [Naiming](#naiming)
 ## Comentarios
 Es la parte dentro de mi archivo de codigo que no es leido ni ejecutado por el interprete de `js`.
 > [!TIP]
@@ -30,7 +30,7 @@ Es la parte dentro de mi archivo de codigo que no es leido ni ejecutado por el i
    *
    ```
    Este tipo de comentario es muy usado para documentar el codigo, usado generalmente para la explicacion de funciones y clases en `Js`.
-   [link del archivo]("./comentarios.js")
+   [link del archivo](./comentarios.js)
 
 ## La consola
 La herramienta de JavaScript mas usada dentro de los navegadores es usada para la [depuracion](#depuracion) de nuestro codigo
@@ -66,3 +66,17 @@ else{
 console.warn("eres pulpin") }
 ```
 #### 3. Tablas
+Este tipo de mensaje por consola nos muestra la informacion en una tabla.
+Solo dara formato a los datos de tipo `array` ([]) y `objetos` ({}).
+```js
+lenguajes=[
+    {nombre_:"javascript",extension:".js"},
+    {nombre_:"python",extension:".py"},
+    {nombre_:"php",extension:".php"}
+ ]
+ con
+```
+[para ver los ejemplos has clic aqui](consola.js)
+## Naiming
+Es la tecnica para para nombrar variables, funcion y clases dentro de un lenguaje de proghramacion.
+Las variables tienen reglas muy especifica que debemos seguir a la hora de designar sus nombres.

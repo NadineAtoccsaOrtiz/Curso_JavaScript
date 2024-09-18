@@ -3,8 +3,10 @@
 console.log("mensaje de texto sin formato")
 //para mostrar informacion
 console.info("mensaje de texto informativo")
+
 //error tipo sintaxis
 //console.inf("error de sintaxis")
+
 //mensaje de error
 console.error("mensaje de texto de error")
 //mensaje de alerta
@@ -30,3 +32,12 @@ for (let i=0;i<=100;i++){
     console.log(i)
 }
 console.timeEnd("tiempo")
+//mensaje de tipo tabla
+console.table("soy una tabla, edwin es un clavo")
+lenguajes=[
+    {nombre_:"javascript",extension:".js"},
+    {nombre_:"python",extension:".py"},
+    {nombre_:"php",extension:".php"}
+ ]
+ console.log(lenguajes)
+ console.table(lenguajes)
