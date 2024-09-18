@@ -8,6 +8,8 @@
       - [2. Gestion de tiempo](#2-gestion-de-tiempo)
       - [3. Tablas](#3-tablas)
   - [Naiming](#naiming)
+  - [Usos incorrectos](#usos-incorrectos)
+  - [Usos correctos](#usos-correctos)
 ## Comentarios
 Es la parte dentro de mi archivo de codigo que no es leido ni ejecutado por el interprete de `js`.
 > [!TIP]
@@ -74,9 +76,37 @@ lenguajes=[
     {nombre_:"python",extension:".py"},
     {nombre_:"php",extension:".php"}
  ]
- con
 ```
 [para ver los ejemplos has clic aqui](consola.js)
 ## Naiming
 Es la tecnica para para nombrar variables, funcion y clases dentro de un lenguaje de proghramacion.
 Las variables tienen reglas muy especifica que debemos seguir a la hora de designar sus nombres.
+## Usos incorrectos
+- Nose pueden usar espacios
+> [!WARNING]
+>  ```js
+> #INCORRECTO
+>  con espacios=45
+>  ```
+- No usar un numero delante
+> [!WARNING]
+>  ```js
+> #INCORRECTO
+>  1numero=45
+>  ```
+- Evitar simbolos y `snake_case`
+> [!WARNING]
+>  ```js
+> #INCORRECTO
+>  dame$=45
+> #INCORRECTO
+>  con_guiones_bajos="no es correcto"
+>  ```
+## Usos correctos
+- Debemos usar nombres que expliquen que aporta esa variable a nuestro codigo
+- Debemos de usar la tecnica `camelCase`.
+> [!TIP]
+>  ```js
+> #CORRECTO
+>  edadAlumno=45
+>  ```
