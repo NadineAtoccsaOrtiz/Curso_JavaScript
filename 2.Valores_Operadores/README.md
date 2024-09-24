@@ -11,26 +11,29 @@ Cuando hablamos de tipos de datos en JavaScript nos referimos a su representacio
 ### Datos Primitivos
 Son aquellos datos que ya existen, no pueden ser creados, actualizados ni eliminados, solo pueden ser llamados para elo uso que deseamos darle.
 Los datos primitivos en JavaScript son:
-#### - Numeros(Number)
+#### Numeros(Number)
 Los valores de tipo Numero, como es de esperar son numnero y en JavaScript se escribe o se hace el llamado del valor de la siguiente manera:
 - numero de tipo entero
 ```js
-20
+20 //positivo
+-20 //negativo
 //estamos usando un patron de bits para el numero 20 que existia dentro de la memoria de trabajo.
 //cantidad limite que se puede almacenar en un solo patron o cajita de 64bits  es de 2 elevado a 64. Por cada numero la representacion siempre sera 64 bits en javascript
 ```
 - numero fraccional (punto flotante, decimal, franccion)
 ```js
-2.7
+2.7 
 0.
-.0
+.0 // positivo
+-3,6 // negativo
 // Cada numero equivale a 64 bits y se le agrega un  bit por el punto
 // internamente java guarda los numero como flotante positivo independientemente de su tipo de numero
 // Cuando crea un patron de bits para alamcenar todos los numeros los almacena como decimal positivo.
 ```
 - numeros de tipo notacion cientifica
 ```js
-2.998e8
+2.998e8 // positivo
+-2.46e8 // negativo
 // es igual que decir 2.998^ 10*8
 //e significa (*10)
 ```
@@ -39,7 +42,15 @@ Los valores de tipo Numero, como es de esperar son numnero y en JavaScript se es
 ---
 [!TIP]
 >cuando javascript hace trabajo de memoria(cuando crea un patron de bit para alamcenar) todos numero se almacena como decimal positivo.
-#### - 
+- numeros especiales 
+En javascript existen tres valores de tipo numero que se consideran un dato primitivo numerico de tipo especial
+```js
+infinity
+- infinity // negativo
+NaN // not a number
+// cuando el resultado de una operacion es matematicamente imposible.
+```
+
 
 - tipos (tipos de datos)
 - operadores
