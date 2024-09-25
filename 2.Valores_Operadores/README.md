@@ -1,6 +1,11 @@
 # VALORES, TIPOS Y OPERADORES
 ## Indice
-- [tipos de datos o valores](#valores)
+- [VALORES, TIPOS Y OPERADORES](#valores-tipos-y-operadores)
+  - [Indice](#indice)
+  - [Valores](#valores)
+    - [Datos Primitivos](#datos-primitivos)
+      - [Numeros(Number)](#numerosnumber)
+      - [Arimetica](#arimetica)
 ## Valores
 Imagina un mar de bits
 Una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo` o `memoria principal` o `memoria volatil` o `ram`.
@@ -50,7 +55,16 @@ infinity
 NaN // not a number
 // cuando el resultado de una operacion es matematicamente imposible.
 ```
+#### Arimetica
+La principal operacion que se puede hacer con numeros es la arimetica.
+Para esto tenemos los operadores arimeticos como:
+- suma(+).
+- resta(-).
+- multiplicacion(*).
+- division(/).
+- potencia(**).
+- modulo(%).
+**podemos agrupar operaciones con parentesis () las operaciones que esten dentro del parentesis se ejecutaran primero**
+consulta el archivo de operadores [aqui](./operadores.js). ve los ejercicios [aqui](./ejercicios.js)
 
 
-- tipos (tipos de datos)
-- operadores
