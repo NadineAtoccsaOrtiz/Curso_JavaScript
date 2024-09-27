@@ -5,7 +5,10 @@
   - [Valores](#valores)
     - [Datos Primitivos](#datos-primitivos)
       - [Numeros(Number)](#numerosnumber)
-      - [Arimetica](#arimetica)
+      - [Aritmetica](#aritmetica)
+      - [Cadenas](#cadenas)
+      - [Concatenacion](#concatenacion)
+      - [plantillas lierales](#plantillas-literales)
 ## Valores
 Imagina un mar de bits
 Una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo` o `memoria principal` o `memoria volatil` o `ram`.
@@ -55,7 +58,7 @@ infinity
 NaN // not a number
 // cuando el resultado de una operacion es matematicamente imposible.
 ```
-#### Arimetica
+#### Aritmetica
 La principal operacion que se puede hacer con numeros es la arimetica.
 Para esto tenemos los operadores arimeticos como:
 - suma(+).
@@ -67,4 +70,70 @@ Para esto tenemos los operadores arimeticos como:
 **podemos agrupar operaciones con parentesis () las operaciones que esten dentro del parentesis se ejecutaran primero**
 consulta el archivo de operadores [aqui](./operadores.js). ve los ejercicios [aqui](./ejercicios.js)
 
+#### Cadenas  
+El siguiente tipo de dato primitivo es la `cadena` -  `string`.
+¿Para que se usan las cadenas en javascript?
+- Se usa para representar texto
+- una cadena se escribe encerrando su contenido entre comillas (""):
+```js
+//cadenas con contenido
+"  " //el espacio tambien tiene su representacion binaria
+"soy un texto" //comillas dobles
+'tambien soy un texto' //comillas siimples
+`yo igual soy un texto` //acento grave, es una incorporacion de enmascript6, antes no existia y se usaba (\)
+//cadenas vacias
+"" 
+```
+**Problema** - como representamos un texto entre comillas
+para hacer el uso de comillas dentro del contenido de una cadena podemos seguir las siguientes recomendaciones:
+```js
+//si nuestro texto tiene que estar entre comillas simples
+"'este texto se muestra entre comillas simples'"
+//si nuestro texto tiene que estar entre comillas dobles
+'"este texto se muestra entre comillas dobles"'
+//si nuestro texto tendra tanto comillas dobles como simples
+`'esta en comillas simples',"esta en comillas dobles"`
+```
+otra manera de hacer lo antes mencionado es haciendo uso de la barra invertida  `\` tambien conocidos como `caracter de escape`.
+hacer uso de este caracter indica que el caracter posterior tendra un significado especial.
+```js
+"de este texto solo esta \"palabra\" estara en comillas"
+```
+**Problema** - deseamos agregar un salto de linea en nuestro texto.
+```js
+//solucionamos este problema haciendo uso de los acentos graves
+`la primera linea
+segunda linea`
+```
+Antes de la incorporacion de Enmascript6 en el uso de acentos graves se utilizaba el caracter de escape `\`
+```js
+"esta es mi primera linea \n y esta es la segunda linea"
+```
+**Problema** - deseo tabular un texto
+  ```js
+  `
+  este texto no esta tabulado
+      este texto si esta tabulado
+  `
+  ```
+ahora tabularemos haciendo uso del caracter de escape `\`
+```js
+"si tabular \n \t y tabulado"
+```
+#### Concatenacion
+El unico operador aritmetico que puede ser usado por cadenas es el operador de suma (+) puede ser usado entre dos a mas cadenas y pasa a llamarse operadores de concatenacion., lo que realiza es unir cadenas en una sola.
+```js
+"hola"+" "+"mundo" //serie de funciones exclusivas se llaman metodos para modificar cadenas: ejemplo para mostrar la primera letra en mayusculas
+```
+#### Plantillas literales
+Las plantillas literales mencionadas anteriormente con el nombre de acentos graves son usadas para mostrar texto literal, tambien nos permite ejecutar codigo javascript dentro de una plantilla literal, el codigo o el resultado de este codigo sera transformado en un dato de tipo texto y se incluira en la posicion en que se encuentre.
+Para hacer uso de esta funcionalidad debemos usar, la siguiente expresion. `${}`
+```js
+//creando una plantilla literal
+``
+//usando javascript dentro de una plantilla literal
+`la suma de 1+2 es ${1+1}`
+```
+> [!TIP]
+> se dice literal por que con el formato que codificamos sera mostrado de esa misma forma en la consola.
 
