@@ -8,7 +8,9 @@
       - [Aritmetica](#aritmetica)
       - [Cadenas](#cadenas)
       - [Concatenacion](#concatenacion)
-      - [plantillas lierales](#plantillas-literales)
+      - [Plantillas Lierales](#plantillas-literales)
+      - [Operadores Unarios](#oeradores-unarios)
+      - [Valores Boleanos](#valores-boleanos)
 ## Valores
 Imagina un mar de bits
 Una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo` o `memoria principal` o `memoria volatil` o `ram`.
@@ -137,3 +139,33 @@ Para hacer uso de esta funcionalidad debemos usar, la siguiente expresion. `${}`
 > [!TIP]
 > se dice literal por que con el formato que codificamos sera mostrado de esa misma forma en la consola.
 
+#### Oeradores Unarios
+No todos los operadores son simbolos, algunos se escriben como palabras.
+Un ejemplo es el operador `typeof`, este operador produce un valor de cadena que indica el tipo de valor que le proporcionamos.
+
+`operadores binarios` se les conoce por que operan sobre dos valores  `2*5` 
+`operadores unarios` se le conoce por que solo trabaja con un valor
+
+```js
+//para poder ver su funcionalidad o el valor que genera, siempre debemos mostrarlo en un console
+console.log(typeof 5)
+```
+#### Valores Boleanos
+Este tipo de dato primitivo es util cuando tenemos un valor que distinga solo entre dos posibilidades, como `si` y `no` o `encendido` y `apagado`.
+Para este propocito, Javascript tiene un tipo de dato `Boleano`, que tiene solo dos valores, `true` y `false`.
+**¿que formas de producir valores boleanos tenemos?**
+1. **usando operadores de comparacion**
+   Los operadores de comparacion son los siguientes:
+   - Mayor que (>).
+   - Menor que (<).
+   - Mayor o igual que (>=).
+   - Menor o igual que (<=).
+   - Igual a (==).
+   - Estrictamente igual (===).
+   - No es igual a (!=). 
+2. **Usando Operadores logicos**
+   Javascript soporta 3 operadores logicos
+   - and (y) representacion en javascript `&&`,
+   - or (o) representacion en javascript `||`,
+   - not (no) representacion en javascript `!`
+   **Observacion** este es un operador unario que su funcion es invertir el valor que tiene a su derecha `true` produce `false`.
