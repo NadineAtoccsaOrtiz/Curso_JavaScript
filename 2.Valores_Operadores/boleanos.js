@@ -48,11 +48,3 @@ console.log(true||false)
 // en el casodel operador ! invierte el valor dado
 console.log(!true)
 console.log(!false)
-
-//usando el operador realcional
-//solo funciona en objetos o listas
-console.log("hola"in ["hola", "mundo"])
-
-//AVERIGUAR por que sale false en el caso anterior
-
-//
