@@ -40,7 +40,7 @@ console.log(0&&"hola")
 
 respuesta="te devuelvo los ositos"
 console.log(respuesta || "tu busqueda no existe")
-
+console.log(0||"")
 //en el caso del operador || produce verdadero si cualquiera de los valores dados es verdadero.
 console.log(false || false)
 console.log(true||false) 
@@ -48,3 +48,9 @@ console.log(true||false)
 // en el casodel operador ! invierte el valor dado
 console.log(!true)
 console.log(!false)
+
+//la operacion relacional solo funciona en objetos y arrays
+console.log("hola" in ["hola","mundo"])
+//Javascript no busca valores como "hola" sino que busca por el indice del valor
+//si en vez de poner "hola" ponemos el indice en el que se encuentra, es decir "0", nos dara el resultado
+console.log(0 in ["hola","mundo"])
