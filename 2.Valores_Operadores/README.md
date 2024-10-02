@@ -72,6 +72,7 @@ Para esto tenemos los operadores arimeticos como:
 - modulo(%).
 - incremento (++).
 - decremento (--).
+
 **podemos agrupar operaciones con parentesis () las operaciones que esten dentro del parentesis se ejecutaran primero**
 consulta el archivo de operadores [aqui](./operadores.js). ve los ejercicios [aqui](./ejercicios.js)
 
@@ -185,7 +186,7 @@ Para este propocito, Javascript tiene un tipo de dato `Boleano`, que tiene solo 
   ```
 #### Operador Ternario
 Este operador trabaja con tres valores, el primer valor es el que determinara si se muestran el resto de valores, eso quiere decir que si el primer valor es verdadero mostrara el segundo valor, mientras que si es falso mostrara el tercer valor.
-![alt text](imagen.png)
+![alt text](image.png)
 ```js
 
 ```

@@ -54,3 +54,5 @@ console.log("hola" in ["hola","mundo"])
 //Javascript no busca valores como "hola" sino que busca por el indice del valor
 //si en vez de poner "hola" ponemos el indice en el que se encuentra, es decir "0", nos dara el resultado
 console.log(0 in ["hola","mundo"])
+
+
