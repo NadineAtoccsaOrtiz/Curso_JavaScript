@@ -8,8 +8,8 @@
       - [Aritmetica](#aritmetica)
       - [Cadenas](#cadenas)
       - [Concatenacion](#concatenacion)
-      - [Plantillas Lierales](#plantillas-literales)
-      - [Operadores Unarios](#oeradores-unarios)
+      - [Plantillas literales](#plantillas-literales)
+      - [Oeradores Unarios](#oeradores-unarios)
       - [Valores Boleanos](#valores-boleanos)
 ## Valores
 Imagina un mar de bits
@@ -69,6 +69,8 @@ Para esto tenemos los operadores arimeticos como:
 - division(/).
 - potencia(**).
 - modulo(%).
+- incremento (++).
+- decremento (--).
 **podemos agrupar operaciones con parentesis () las operaciones que esten dentro del parentesis se ejecutaran primero**
 consulta el archivo de operadores [aqui](./operadores.js). ve los ejercicios [aqui](./ejercicios.js)
 
