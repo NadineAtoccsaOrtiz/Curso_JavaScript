@@ -33,3 +33,9 @@ console.log(true||false)
 // en el casodel operador ! invierte el valor dado
 console.log(!true)
 console.log(!false)
+
+//averiguar por que sale falso en la operacion
+console.log("hola" in ["hola","mundo"])
+//Java no busca valores, sino que busca por indice
+//en vez de poner que busque "hola" debemos poner el indice en el que se encuentra, el cual seria "0"
+console.log(0 in ["hola", "mundo"])
