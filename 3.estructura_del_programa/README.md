@@ -147,6 +147,12 @@ console.log("hola")
 2. `for` - esta es la manera mas abreviada de crear un bucle en javascript , en el caso de while necesitamos una variable contador , luego la condicion y finalmente el aumento del contador. En el caso de `for` estos tres pasos se realiza en una sola linea.
 ```js
 for(let i=2; i<=20; i++){
-if (i %2==0) console.log(i)
+  if (i %2==0) console.log(i)
 }
 ```
+> [!TIP]
+> `while` se usa cuando no sabemos la cantidad de veces que deseamos ejecutar un codigo, por lo general su finalizacion requerira de una intervencion externa.
+> `for` se usa cuando sabemos la cantidad de veces que queremos o deseamos ejecutar un codigo.
+
+< [!NOTE] 
+< Para terminar un bucle se hace uso de la palabra reservada `break`.
