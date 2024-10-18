@@ -7,7 +7,8 @@
   - [Binding o enlace](#binding-o-enlace)
   - [El Entorno](#el-entorno)
   - [Control de Flujo](#control-de-flujo)
-    - [Ejecucion condicional](#ejecucion-condicional)
+  - [Ejecucion condicional](#ejecucion-condicional)
+  - [Bucles](#bucles)
 ## Interaccion basica con el usuario
 Podemos interactuar con el usuario desde Javascript utilizando un metodo sencillo que viene implementado en los navegadores.
 El metodo es conocido como `window` o el metodo de ventana, este metodo en realidad es un objeto que contiene o almacena varias funciones, entre ellas las de mostrar mensajes o pedir datos al usuario.
@@ -115,5 +116,37 @@ if (totalCompra>50 && totalCompra<100){
   console.log(`tienes un descuento del 20% ${totalCompra*0.20}`)
 }else {
   console.log(`tienes un descuento del 50% ${totalCompra*0.50}`)
+}
+```
+### Bucles
+Consideremos el siguiente problema
+crear un programa que imprima los numeros del 1 al 12, una forma de hacerlo seria el siguiente:
+```js
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+console.log(6)
+console.log(7)
+console.log(8)
+console.log(9)
+console.log(10)
+console.log(11)
+console.log(12)
+```
+El ejemplo anterior es valido pero la idea cuando programamos es hacer menos trabajo y no mas, en el ejercicio anterior tendremos problemas si deseamos mostrar todos los numeros menores a 1000.
+Necesitamos una manera de ejecutar un fragmento de codigo multiples de veces. A esta forma de control de flujo se le llama `bucle`.
+Para crear un bucle tenemos dos formas de hacerlo
+1. `while` - para hacer uso de este bucle primero debemos usar la palabra clave `while` este a su ves como el `if` devera tener una condicion, si esta condicion sea falsa , el bucle no sera ejecutado , al igual que el `if` luego de darle la condicion crearemos el `cuerpo` donde escribiremos el codigo que deseamos ejecutar.
+```js
+while(true){
+console.log("hola")
+}
+```
+2. `for` - esta es la manera mas abreviada de crear un bucle en javascript , en el caso de while necesitamos una variable contador , luego la condicion y finalmente el aumento del contador. En el caso de `for` estos tres pasos se realiza en una sola linea.
+```js
+for(let i=2; i<=20; i++){
+if (i %2==0) console.log(i)
 }
 ```
