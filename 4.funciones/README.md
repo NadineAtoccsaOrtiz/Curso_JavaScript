@@ -5,6 +5,11 @@
   - [Tipos de Argumentos y Parametros](#tipos-de-argumentos-y-parametros)
     - [Argumentos y parametros posicionales](#argumentos-y-parametros-posicionales)
     - [Argumentos y parametros Nominales](#argumentos-y-parametros-nominales)
+  - [Tipos de funciones por su notacion](#tipos-de-funciones-por-su-notacion)
+    - [Funciones como valor](#funciones-como-valor)
+    - [Funcion como declaracion](#funcion-como-declaracion)
+    - [Funcion de flecha (arrow function)](#funcion-de-flecha-arrow-function)
+    - [Diferencias](#diferencias)
 # FUNCIONES
 Las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 Nos sirve para modular (modularizar) nuestro programa y estructurarlos en bloques que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
@@ -51,10 +56,8 @@ salu2("jory")
 Los nombres de las funciones deben representar acciones por lo que deben construirse usando el `verbo` que representa la accion seguido de un `sustantivo` representara a la entidad.
 ```js
 function crearUsuario(){
-
 }
 function enviarCorreo(){
-
 }
 ```
 ## Tipos de Argumentos y Parametros
@@ -85,4 +88,50 @@ registroAlumno("jory", "rodriguez", "todos los dias")
 ```
 > [!INFO]
 > Posicionales en orden y Nominales especificar el parametro y su valor.
+## Tipos de funciones por su notacion
+### Funciones como valor
+En este caso se crea  una funcion como si fuera un valor de un enlace.
+```js
+let saludo=function(){
+    console.log("bienvenido")
+}
+saludo()
+```
+En este caso el nombre de la funcion sera el nombre que le  pongamos al enlace y para llamarlo o ejecutarlo debemos poner el nombre del enlace mas los parentesis.
+Al igual que una funcion clasica podemos tambien pasarle parametros.
+### Funcion como declaracion
+Se le conoce como funcion `declarativa` a la manera clasica de como creamos una funcion.
+```js
+function saludo(){
 
+}
+console.log(saludo())
+```
+### Funcion de flecha (arrow function)
+Esta funcion es introducida a partir de la funcion de ecma script 5 `es5`.
+Se implemento para la creacion y ejecucion rapida y mas entendible de las funciones.
+la funcion flecha evita la `verbosidad` en javascript
+>[!NOTE]
+>`verbosidad` o `verboso` se utiliza en la programacion para referirce a un codigo que necesita demaciadas lineas de codigo o necesita cumplir estrictamente una serie de reglas podemos comprar la `verbosidad` a un texto demaciado extenso o redunante.
+se crea de la misma manera que una funcion como valor, eso quiere decir que la funcion flecha sera el valor de un enlace.
+la funcion flecha tiene la siguiente estructura:
+el parametro seguido del simbolo flecha `=>` y el cuerpo de ser necesario o solo de codigo que se retornara.
+```js
+function saludo(){
+    return "hola mundo"
+}
+console.log(saludo())
+// de flecha, no tiene cuerpo a menos que el codigo sea muy extenso
+let saludo=()=>("hola mundo")
+console.log(saludo())
+//mensaje
+let mensaje=texto=>console.log("hola, ",texto)
+console.log(mensaje("el primo"))
+// en el caso de tener mas de un parametro y ejecutar mas de una sola linea de codigo
+let registoUsuario=(nombre,apellido)=>{
+    let alumno=`${nombre},${apellido}`
+    return alumno
+}
+console.log(registroUsuario("edwin","cachondo"))
+```
+### Diferencias
