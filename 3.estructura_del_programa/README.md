@@ -7,8 +7,8 @@
   - [Binding o enlace](#binding-o-enlace)
   - [El Entorno](#el-entorno)
   - [Control de Flujo](#control-de-flujo)
-  - [Ejecucion condicional](#ejecucion-condicional)
-  - [Bucles](#bucles)
+    - [Ejecucion condicional](#ejecucion-condicional)
+    - [Bucles](#bucles)
 ## Interaccion basica con el usuario
 Podemos interactuar con el usuario desde Javascript utilizando un metodo sencillo que viene implementado en los navegadores.
 El metodo es conocido como `window` o el metodo de ventana, este metodo en realidad es un objeto que contiene o almacena varias funciones, entre ellas las de mostrar mensajes o pedir datos al usuario.
@@ -116,6 +116,22 @@ if (totalCompra>50 && totalCompra<100){
   console.log(`tienes un descuento del 20% ${totalCompra*0.20}`)
 }else {
   console.log(`tienes un descuento del 50% ${totalCompra*0.50}`)
+}
+```
+- **Condicion multiple `switch`**
+javascript dispone de una opcion para crear estructuras condicionales multiples, este es el `switch` permite crear estructuras condicionales multiples. `switch` permite crear estructuras mas optimizadas para cubrir un amplio abanico de posibilidades.Pero es mas tardado que if y else, ocupa mas almacenamiento de memoria.
+```js
+let edad=Number(prompt("ingresa tu edad: "))
+switch (edad){ //igual que if
+  case 4: 
+    console.log("tienes 4 años")
+    break
+  case 8:
+    console.log("tienes 8 años")
+    break
+  default: //igual que else
+    console.log("tienes:",edad)
+    break
 }
 ```
 ### Bucles

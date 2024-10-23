@@ -1,8 +1,10 @@
 # INDICE
-- [estructura de una funcion](#estructura-de-una-funcion)
-- [tipos de argumentos y parametros](#tipos-de-argumentos-y-parametros)
-- [posicionales](#argumentos-y-parametros-posicionales)
-- [nominales](#argumentos-y-parametros-nominales)
+- [INDICE](#indice)
+- [FUNCIONES](#funciones)
+  - [Estructura de una funcion (como se crea una funcion)](#estructura-de-una-funcion-como-se-crea-una-funcion)
+  - [Tipos de Argumentos y Parametros](#tipos-de-argumentos-y-parametros)
+    - [Argumentos y parametros posicionales](#argumentos-y-parametros-posicionales)
+    - [Argumentos y parametros Nominales](#argumentos-y-parametros-nominales)
 # FUNCIONES
 Las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 Nos sirve para modular (modularizar) nuestro programa y estructurarlos en bloques que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
@@ -83,3 +85,4 @@ registroAlumno("jory", "rodriguez", "todos los dias")
 ```
 > [!INFO]
 > Posicionales en orden y Nominales especificar el parametro y su valor.
+
