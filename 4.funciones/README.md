@@ -10,6 +10,7 @@
     - [Funcion como declaracion](#funcion-como-declaracion)
     - [Funcion de flecha (arrow function)](#funcion-de-flecha-arrow-function)
     - [Diferencias](#diferencias)
+  - [La pila de llamadas](#la-pila-de-llamadas)
 # FUNCIONES
 Las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 Nos sirve para modular (modularizar) nuestro programa y estructurarlos en bloques que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
@@ -135,3 +136,49 @@ let registoUsuario=(nombre,apellido)=>{
 console.log(registroUsuario("edwin","cachondo"))
 ```
 ### Diferencias
+Las diferencias que te enemos al momento de crear una funcion declarativa, funcion como valor y flecha es el binding.
+- **binding** es una tecnica que guarda las funciones y variables (enlaces)  sube al principio la declaracion y no el valor a la cabecera o al principio del archivo de javascript.
+```js
+despedida() //en funciones declarativas
+function saludo(){
+    return "hola"
+}
+function despedida(){
+    return "adios"
+}
+```
+```js
+saludo()
+despedida()
+```
+## La pila de llamadas
+Es una tecnica que se usa para controlar de manera correcta la ejecucion de una funcion.
+-**tarea** averiguar sobre FLIFO, es un algoritmo de estructura de datos, tecnica para ordenar una pila de lamadas, last in first out
+```js
+//programa 
+function cortarTomate() {
+    console.log("cortando tomate")
+}
+function cortarLechuga() {
+    console.log("cortando lechuga")
+}
+function cortarPepino() {
+    console.log("cortando pepino")
+}
+function cortarLimon() {
+    console.log("cortando limon")
+}
+function prepararEnsalada() {
+    cortarTomate()
+    cortarLechuga()
+    cortarPepino()
+    cortarLimon()
+    console.log("mezclando verduras")
+}
+function comer() {
+    prepararEnsalada()
+     console.log("comiendo la ensalada")   
+}
+comer()
+```
+![alt text](image.png)
