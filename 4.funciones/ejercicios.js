@@ -20,7 +20,39 @@
 //crear un programa que pida registrar el nombre de un producto el usuario podra luego eliminar el producto o actualizar el nombre del produto.
 //observacion al realizar la actualizacion podre ver el valor anterior como el valor nuevo
 
-let productos = {};
+let producto = (function() {
+  let productos = {};
+
+  return {
+    registrar: function(nombre) {
+      productos[nombre] = nombre;
+      console.log("Registro exitoso: " + nombre);
+    },
+    eliminar: function(nombre) {
+      if (productos[nombre]) {
+        delete productos[nombre];
+        console.log("Eliminado: " + nombre);
+      } else {
+        console.log("No encontrado: " + nombre);
+      }
+    },
+    actualizar: function(anterior, nuevo) {
+      if (productos[anterior]) {
+        productos[nuevo] = productos[anterior];
+        delete productos[anterior];
+        console.log("Actualizado: de " + anterior + " a " + nuevo);
+      } else {
+        console.log("No encontrado: " + anterior);
+      }
+    },
+    mostrar: function() {
+      console.log("Productos:");
+      for (let producto in productos) {
+        console.log(producto);
+      }
+    }
+  };
+})();
 
 while (true) {
   console.log("Menú:");
@@ -32,38 +64,22 @@ while (true) {
 
   let opcion = prompt("Ingrese una opción:");
 
-  if (opcion === "registrar") {
+  if (opcion === "1") {
     let nombre = prompt("Ingrese nombre del producto:");
-    productos[nombre] = nombre;
-    console.log(`Registro exitoso: ${nombre}`);
-  } else if (opcion === "eliminar") {
-    nombre = prompt("Ingrese nombre del producto a eliminar:");
-    if (productos[nombre]) {
-      delete productos[nombre];
-      console.log(`Eliminado: ${nombre}`);
-    } else {
-      console.log(`No encontrado: ${nombre}`);
-    }
-  } else if (opcion === "actualizar") {
+    producto.registrar(nombre);
+  } else if (opcion === "2") {
+    let nombre = prompt("Ingrese nombre del producto a eliminar:");
+    producto.eliminar(nombre);
+  } else if (opcion === "3") {
     let anterior = prompt("Ingrese nombre anterior:");
-    if (productos[anterior]) {
-      let nuevo = prompt("Ingrese nombre nuevo:");
-      productos[nuevo] = productos[anterior];
-      delete productos[anterior];
-      console.log(`Actualizado: de ${anterior} a ${nuevo}`);
-    } else {
-      console.log(`No encontrado: ${anterior}`);
-    }
-  } else if (opcion === "mostrar") {
-    console.log("Productos:");
-    for (let producto in productos) {
-      console.log(producto);
-    }
-  } else if (opcion === "salir") {
+    let nuevo = prompt("Ingrese nombre nuevo:");
+    producto.actualizar(anterior, nuevo);
+  } else if (opcion === "4") {
+    producto.mostrar();
+  } else if (opcion === "5") {
     console.log("Hasta luego!");
     break;
   } else {
     console.log("Opción inválida");
   }
 }
-
