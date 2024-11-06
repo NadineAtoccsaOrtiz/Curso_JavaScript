@@ -11,6 +11,9 @@
     - [Funcion de flecha (arrow function)](#funcion-de-flecha-arrow-function)
     - [Diferencias](#diferencias)
   - [La pila de llamadas](#la-pila-de-llamadas)
+  - [CLOSURE o Funciones de cierre (Funciones que retorna funciones)](#closure-o-funciones-de-cierre-funciones-que-retorna-funciones)
+    - [Closure de tipo clase](#closure-de-tipo-clase)
+    - [Prototype (Tarea- averiguar y sus ejemplos)](#prototype-tarea--averiguar-y-sus-ejemplos)
 # FUNCIONES
 Las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 Nos sirve para modular (modularizar) nuestro programa y estructurarlos en bloques que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
@@ -204,4 +207,32 @@ retornaValor(10)()
 ```
 >[!NOTE]
 >Las funciones `closure` son usadas por que pueden mantener el valor de sus enlaces o variables locales en todo el proceso de la ejecucion de su funcion padre por cada llamada que se le realice.
+### Closure de tipo clase
+Son funciones cuyo uso son iguales a las clases, dentro de la ejecucion de una clase tenemos lo que llama como `instancia`. En javascript tenemos funciones `closure` que se pueden instanciar al igual que una clase, la diferencia con las funciones `closure` clasicas es que en esta hacemos uso de la palabra reservada `keyword` llamada `this`.
+```js
+function contador(){
+    this.contador=1
+    this.incre=function(){
+        this.contador++
+    }
+    this.decre=function(){
+        this.contador--
+    }
+}
+//instanciar, almacenar la funion en una variable, hacer uso de new para crear la instancia
+let count1=new contador()
+console.log(count1.contador)
+count1.incre()
+console.log(count1.contador)
+//ejemplo2
+for(let i=0;i<5;i++){
+    count1.incre()
+}
+```
+>[!NOTE]
+>la funcion closure de tipo clase no hace uso de `return` en sus funciones al hacer uso de `this` cada funcion o variable estara enlazada al objeto que se cree.
 
+>[!WARNING]
+>El problema principal de este tipo de funciones es que cuando creamos un nuevo objeto apartir de la funcion tipo clase, reservara espacio en memoria para toda la clase y sus valores creador,eso quiere decir variables y funciones. Cada vez que llamamos a una funcion esta se replica en la memoria.
+
+### Prototype (Tarea- averiguar y sus ejemplos)

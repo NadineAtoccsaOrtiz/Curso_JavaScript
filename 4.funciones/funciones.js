@@ -37,39 +37,53 @@
 //return contador--
 //return contador
 
+// function contador(){
+//     //variable local
+//     let contador=0
+
+//     function incrementar(){
+//         return contador++
+//     }
+
+//     function decrementar(){
+//         return contador--
+//     }
+
+//     function obtenerValor(){
+//          console.log(contador)
+//     }
+//     return {
+//         obtenerValor,
+//         incrementar,
+//         decrementar
+//     }
+// }
+
+// let count1=contador()
+// count1.incrementar()
+// for(let i=0;i<5;i++){
+//     count1.incrementar()
+// }
+// count1.obtenerValor()
+
+// let count2=contador()
+// for(let i=0;i<5;i++){
+//     count1.decrementar()
+// }
+// count2.obtenerValor()
+
+// funcion closure de tipo clase
 function contador(){
-    //variable local
-    let contador=0
-
-    function incrementar(){
-        return contador++
+    this.contador=0
+    this.incre=function(){
+        this.contador++
     }
-
-    function decrementar(){
-        return contador--
+    this.decre=function(){
+        this.contador--
     }
-
-    function obtenerValor(){
-         console.log(contador)
-    }
-    return {
-        obtenerValor,
-        incrementar,
-        decrementar
-    }
-}
-
-let count1=contador()
-count1.incrementar()
-for(let i=0;i<5;i++){
-    count1.incrementar()
-}
-count1.obtenerValor()
-
-let count2=contador()
-for(let i=0;i<5;i++){
-    count1.decrementar()
-}
-count2.obtenerValor()
-// 
-
+}    
+//instanciar, almacenar la funion en una variable, hacer uso de new para crear la instancia
+let count1=new contador()
+console.log(count1.contador)
+count1.incre()
+console.log(count1.contador)
