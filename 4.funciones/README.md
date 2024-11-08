@@ -236,3 +236,31 @@ for(let i=0;i<5;i++){
 >El problema principal de este tipo de funciones es que cuando creamos un nuevo objeto apartir de la funcion tipo clase, reservara espacio en memoria para toda la clase y sus valores creador,eso quiere decir variables y funciones. Cada vez que llamamos a una funcion esta se replica en la memoria.
 
 ### Prototype (Tarea- averiguar y sus ejemplos)
+EEn JavaScript, un "prototype" es como un libro de referencia que un objeto puede usar para encontrar información y propiedades.
+Imagina que tienes un coche. Cada coche (cada objeto) tiene ciertas características, como el color o el modelo. Pero todos los coches comparten ciertas funciones, como acelerar o frenar. Estas funciones se pueden definir en un "prototype".
+Cuando creas un nuevo coche, en lugar de tener que volver a escribir todas las funciones para cada coche, simplemente le dices que use el "prototype" de los coches para acceder a esas funciones ya definidas. Esto hace que el código sea más eficiente y ordenado.
+En resumen, el "prototype" es una manera de compartir funciones y características entre varios objetos en JavaScript, lo que ayuda a evitar la repetición y hace que el código sea más fácil de manejar.
+```js
+// Definimos un "constructor" para el coche
+function Coche(color, modelo) {
+    this.color = color;
+    this.modelo = modelo;
+}
+
+// Agregamos funciones al "prototype" del coche
+Coche.prototype.acelerar = function() {
+    console.log(`El ${this.modelo} está acelerando.`);
+};
+
+Coche.prototype.frenar = function() {
+    console.log(`El ${this.modelo} está frenando.`);
+};
+
+// Creamos dos coches nuevos
+const coche1 = new Coche('rojo', 'Toyota');
+const coche2 = new Coche('azul', 'Honda');
+
+// Usamos las funciones del prototype
+coche1.acelerar(); // El Toyota está acelerando.
+coche2.frenar();   // El Honda está frenando.
+```
