@@ -277,7 +277,28 @@ Contador.prototype={
 }
 ```
 ## RECURSION EN FUNCIONES (tarea)
+Cuando una funcion se llama a si misma dentro de su propio codigo, es decir que sirve para descomponer un problema en pequeños problemas y asi llegar mas facil al finaldel problema.
+```js
+function factorial(n){
+    if (n===1){
+        return 1;
+    }else{
+        return n+factorial(n-1);
+    }
+}
+console.log(factorial(5));
+```
 ## FUNCIONES CALLBACKS(tareas)
+Una funcion callback es basicamente una funcion que se pasa como argumento a otra funcion y que se ejecuta una vez que la otra funcion haya terminado su trabajo. Es una tarea quele decimos a la computadora que haga despues de otra tarea es como decirle a javascript que `cuando termine de hacer una primera accion ejecute la segunda accion`. 
+```js
+function mostrarMensaje(mensaje,callback)
+    console.log(mensaje);
+    callback();
+function tareaCompleta(){
+    console.log("la tarea esta completa");
+}
+mostrarMensaje("bienvenido",tareaCompleta);
+```
 # CLASES
 Las clases en javascript llegan en la version `ECMAScript 6`, javascript no tenia al igual que otros lenguajes de programacion orientados a objetos las `clases` ya que js se enfocaba en la `programacion funcional`, sin embargo con la llegada es `Es6`, javascript adopta ser un lenguaje de programacion multiparadigma, entre ellos la programacion orientada a objetos con la llegada de las `clases`.
 ## ESTRUCTURA DE UNA CLASE EN JAVASCRIPT
