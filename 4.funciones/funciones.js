@@ -73,17 +73,40 @@
 // count2.obtenerValor()
 
 // funcion closure de tipo clase
-function contador(){
-    this.contador=0
-    this.incre=function(){
-        this.contador++
-    }
-    this.decre=function(){
-        this.contador--
-    }
-}    
+// function contador(){
+//     this.contador=0
+//     this.incre=function(){
+//         this.contador++
+//     }
+//     this.decre=function(){
+//         this.contador--
+//     }
+// }    
 //instanciar, almacenar la funion en una variable, hacer uso de new para crear la instancia
-let count1=new contador()
-console.log(count1.contador)
-count1.incre()
-console.log(count1.contador)
+// let count1=new contador()
+// console.log(count1.contador)
+// count1.incre()
+// console.log(count1.contador)
+
+//prototype
+function  Contador(nombre){
+    this.count=0
+    this.nombre=nombre
+}
+Contador.prototype={
+    incremento:function(){this.count++},
+    dcremento:function(){this.count--},
+    mostrarDatos:function(){return `${this.count},${this.nombre}`},
+    actualizarNombre:function(nuevoNombre){this.nombre = nuevoNombre}
+}
+//instanciar mi funcion
+let contadorUno=new Contador("primo")
+console.log(contadorUno.mostrarDatos())
+contadorUno.incremento()
+contadorUno.incremento()
+console.log(contadorUno.mostrarDatos())
+contadorUno.actualizarNombre("nadine");
+console.log(contadorUno.mostrarDatos())
+contadorUno.incremento()
+console.log(contadorUno.mostrarDatos())
+//
