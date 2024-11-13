@@ -288,6 +288,7 @@ function factorial(n){
 }
 console.log(factorial(5));
 ```
+
 ## FUNCIONES CALLBACKS(tareas)
 Una funcion callback es basicamente una funcion que se pasa como argumento a otra funcion y que se ejecuta una vez que la otra funcion haya terminado su trabajo. Es una tarea quele decimos a la computadora que haga despues de otra tarea es como decirle a javascript que `cuando termine de hacer una primera accion ejecute la segunda accion`. 
 ```js
