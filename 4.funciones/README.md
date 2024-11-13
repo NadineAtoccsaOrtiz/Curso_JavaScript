@@ -14,6 +14,10 @@
   - [CLOSURE o Funciones de cierre (Funciones que retorna funciones)](#closure-o-funciones-de-cierre-funciones-que-retorna-funciones)
     - [Closure de tipo clase](#closure-de-tipo-clase)
     - [Prototype (Tarea- averiguar y sus ejemplos)](#prototype-tarea--averiguar-y-sus-ejemplos)
+  - [RECURSION EN FUNCIONES (tarea)](#recursion-en-funciones-tarea)
+  - [FUNCIONES CALLBACKS(tareas)](#funciones-callbackstareas)
+- [CLASES](#clases)
+  - [ESTRUCTURA DE UNA CLASE EN JAVASCRIPT](#estructura-de-una-clase-en-javascript)
 # FUNCIONES
 Las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 Nos sirve para modular (modularizar) nuestro programa y estructurarlos en bloques que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
@@ -288,6 +292,7 @@ function factorial(n){
 }
 console.log(factorial(5));
 ```
+![alt text](image-2.png)
 
 ## FUNCIONES CALLBACKS(tareas)
 Una funcion callback es basicamente una funcion que se pasa como argumento a otra funcion y que se ejecuta una vez que la otra funcion haya terminado su trabajo. Es una tarea quele decimos a la computadora que haga despues de otra tarea es como decirle a javascript que `cuando termine de hacer una primera accion ejecute la segunda accion`. 
@@ -300,6 +305,7 @@ function tareaCompleta(){
 }
 mostrarMensaje("bienvenido",tareaCompleta);
 ```
+![alt text](image-3.png)
 # CLASES
 Las clases en javascript llegan en la version `ECMAScript 6`, javascript no tenia al igual que otros lenguajes de programacion orientados a objetos las `clases` ya que js se enfocaba en la `programacion funcional`, sin embargo con la llegada es `Es6`, javascript adopta ser un lenguaje de programacion multiparadigma, entre ellos la programacion orientada a objetos con la llegada de las `clases`.
 ## ESTRUCTURA DE UNA CLASE EN JAVASCRIPT
