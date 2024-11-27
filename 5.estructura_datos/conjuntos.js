@@ -67,3 +67,12 @@ let palabras = ["manzana", "banana", "cereza", "uva"];
 let Cantidad = contarVocal(palabras);
 
 console.log("Cantidad de vocales 'a'=", Cantidad);
+
+//texto a lista
+let texto="hola mundo"
+let listaTexto=texto.split("")
+console.log(listaTexto)
+
+let lista=["hola","como","estas"]
+let nuevoTexto=lista.join(",")
+console.log(nuevoTexto)

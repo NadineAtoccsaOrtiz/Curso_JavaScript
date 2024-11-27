@@ -133,3 +133,18 @@ let flattened = arr.flat();  // [1, 2, 3, 4, [5]]
 let arr = [1, 2, 3];
 let flatMapped = arr.flatMap(x => [x, x * 2]);  // [1, 2, 2, 4, 3, 6]
  ```
+
+- **El método join() te permite convertir un arreglo en una cadena de texto, utilizando un delimitador que tú determines (como una coma, espacio, guion, etc.).**
+```js
+Copiar código
+let lista = ["Hola", "mundo", "esto", "es", "JavaScript"];
+let texto = lista.join(" ");  // Unir con espacio
+console.log(texto);
+```
+
+-**El método más común para convertir un texto en una lista es usar split(). Este método divide una cadena en un arreglo utilizando un delimitador específico.**
+```js
+let texto = "Hola mundo, esto es JavaScript";
+let lista = texto.split(" ");  // Divide la cadena en cada espacio
+console.log(lista);
+```
