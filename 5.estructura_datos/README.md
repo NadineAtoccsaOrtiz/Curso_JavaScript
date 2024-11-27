@@ -5,9 +5,10 @@
     - [Creacion](#creacion)
     - [Acceder a un elemnto del array](#acceder-a-un-elemnto-del-array)
     - [Metodos](#metodos)
+  - [TAREA](#tarea)
   - [Objetos](#objetos)
     - [Creacion](#creacion-1)
-    - [Acceder a un elemnto del objeto](#acceder-a-un-elemnto-del-objeto)
+    - [Acceder a un elemento del objeto](#acceder-a-un-elemento-del-objeto)
     - [Metodos](#metodos-1)
 # Estructura de datos
 A parte de los tipos de datos primitivos javascript nos proporciona los tipos de datos complejos conocido tambien como datos estructurados o estructura de datos.
@@ -66,6 +67,31 @@ vocales.pop()
 Averiguar que otros metodos exiten para el tratamiento de listas en javascript.
 
 ## Objetos
+Los objetos son tipos de datos estructurados similares a las listas, para poder acceder a un elemento de la lista javascript les asignaba indices, en este caso, los objetos como unica diferencia de la listas, nosotros podremos asignar el nombre del elemento al cual deseamos acceder, a esto se le conoce como `clave:valor`. Cada clave:valor es un elemnto de un objeto, si desemos crear mas elemntos, tendremops que separarlos por comas.
 ### Creacion
-### Acceder a un elemnto del objeto
+Para crear un objeto debemos ecerrar los elementos en llaves `{}`, cada elemento estara conformado por su `clave:valor`.
+```js
+//lista
+let datosJory=["jory","rodriguez","20","m"]
+//objeto
+let datosJoryObjeto={
+  nombre:"jory",
+  apellido:"rodriguez",
+  edad:20,
+  sexo:"M",
+  ganado:["primo","chamos","enfermeras","mineros"]
+  direccion:"pasaje querobamba 222"
+  direccionPrecisa:{
+    tipoCalle:"pasaje",
+    nombreCalle:"querobamba",
+    numeroVivienda:222
+    numeroCuarto:5
+  }
+  accion:()=>{console.log("hola soy jory")}
+}
+//tambien se puede crear funciones de tipo clase
+
+```
+### Acceder a un elemento del objeto
+
 ### Metodos
